@@ -1,0 +1,22 @@
+<div class="vf-item">
+    <p class="vf-item-header">
+        <span>{{ vfi.item.title}}</span>
+        <span>{{ vfi.item.views | pbNums}}</span>
+    </p>
+
+
+    <div class="vf-item-video">
+        <iframe ng-if="vfi.embedIframe()"
+            src="{{ vfi.getVideoUrl() }}"
+            class="embed"
+            scrolling="no" 
+            frameborder="0"
+            allowTransparency="true"></iframe>
+
+        <video ng-if="!vfi.embedIframe()"
+            class="embed"
+            controls 
+            src="{{ vfi.getVideoUrl() }}"></video>
+    </div>
+    
+</div>
