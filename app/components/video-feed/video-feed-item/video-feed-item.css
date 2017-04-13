@@ -1,0 +1,29 @@
+pb-video-feed-item {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.vf-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 11px;
+    color: #777;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+    border-bottom: none;
+}
+
+.vf-item video {
+    width: 100%;
+}
+
+.vf-item-invalid {
+    padding: 15%;
+    text-align: center;
+    background: #e4e4e4;
+    color: #b1b0b0;
+}

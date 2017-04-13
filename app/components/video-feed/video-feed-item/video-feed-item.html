@@ -1,22 +1,27 @@
 <div class="vf-item">
-    <p class="vf-item-header">
-        <span>{{ vfi.item.title}}</span>
-        <span>{{ vfi.item.views | pbNums}}</span>
-    </p>
+    <div class="vf-item-valid" ng-if="vfi.isValid()">
+        <p class="vf-item-header">
+            <span>{{ vfi.item.title}}</span>
+            <span>{{ vfi.item.views | pbNums}}</span>
+        </p>
 
+        <div class="vf-item-video">
+            <pb-embed-youtube 
+                ng-if="vfi.item.source === vfi.cfg.SOURCE_YOUTUBE"
+                video-data="vfi.item"></pb-embed-youtube>
+            <pb-embed-facebook 
+                ng-if="vfi.item.source === vfi.cfg.SOURCE_FACEBOOK"
+                video-data="vfi.item"></pb-embed-facebook>
+            <video ng-if="vfi.item.source === vfi.cfg.SOURCE_URL"
+                class=""
+                controls 
+                src="{{ vfi.item.url }}"></video>
+        </div>
+    </div>
+    
 
-    <div class="vf-item-video">
-        <iframe ng-if="vfi.embedIframe()"
-            src="{{ vfi.getVideoUrl() }}"
-            class="embed"
-            scrolling="no" 
-            frameborder="0"
-            allowTransparency="true"></iframe>
-
-        <video ng-if="!vfi.embedIframe()"
-            class="embed"
-            controls 
-            src="{{ vfi.getVideoUrl() }}"></video>
+    <div class="vf-item-invalid" ng-if="!vfi.isValid()">
+        <p>{{vfi.getMissingDataMsg()}}</p>
     </div>
     
 </div>

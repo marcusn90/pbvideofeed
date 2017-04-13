@@ -1,0 +1,21 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.page-header {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
+    color: #457;
+    border-bottom: 2px solid #b0d3f7;
+    background-color: #fbfbfb;
+    text-transform: uppercase;
+    font-size: 14px;
+}

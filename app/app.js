@@ -1,6 +1,7 @@
 var app = angular.module(
     'pb-test-app',
     [
+        'pbEmbedVideo',
         'pbVideoFeed',
         'pbVideoFeedItem',
         'pbUtils'
