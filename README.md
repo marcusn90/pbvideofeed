@@ -7,4 +7,6 @@
 - Install dependencies ```npm install```
 - Run local webserver ```gulp webserver```
 
+- Run tests ```gulp test```
+
 ### Online [demo](https://marcusn90.github.io/pbvideofeed/)
